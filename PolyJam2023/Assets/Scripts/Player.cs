@@ -19,12 +19,15 @@ public class Player : MonoBehaviour
     [SerializeField]
     private TransformTracker _tracker;
 
+    private SpriteRenderer _spriteRenderer;
+
     private bool _isRunning = false;
     private
 
     // Start is called before the first frame update
     void Start()
     {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         StartRunning();
     }
 
@@ -61,5 +64,7 @@ public class Player : MonoBehaviour
                 break;
             }
         }
+
+        _spriteRenderer.sprite = _currentAgeData.AvatarSprite;
     }
 }

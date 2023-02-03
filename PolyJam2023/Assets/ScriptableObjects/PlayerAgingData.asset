@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 21300000, guid: 78f35d0507722ad4092966b57203bf42, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -37,8 +38,8 @@ MonoBehaviour:
       Entry: 4
       Data: 10
     - Name: AvatarSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -52,8 +53,8 @@ MonoBehaviour:
       Entry: 4
       Data: 7
     - Name: AvatarSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -67,8 +68,8 @@ MonoBehaviour:
       Entry: 4
       Data: 4
     - Name: AvatarSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -82,8 +83,8 @@ MonoBehaviour:
       Entry: 4
       Data: 2
     - Name: AvatarSprite
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
