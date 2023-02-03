@@ -11,6 +11,9 @@ public class GroundTileSpawner : MonoBehaviour
     [SerializeField]
     private float _tileWidth = 1f;
 
+    [SerializeField]
+    private float _tileDestroyDistance = 5f;
+
     private List<GroundTile> _groundTiles = new List<GroundTile>();
     private GroundTile _currenTile;
 
@@ -47,15 +50,11 @@ public class GroundTileSpawner : MonoBehaviour
 
     public void SpawnNewTile()
     {
-        if (_groundTiles.Count > 0)
-        {
-            var firstTile = _groundTiles[0];
-            _groundTiles.RemoveAt(0);
-            Destroy(firstTile.gameObject);
-        }
 
         var randomPrefab = GetRandomTilePrefab();
         SpawnTile(randomPrefab);
+
+        ClearOldTiles();
     }
 
     public GroundTile GetRandomTilePrefab()
@@ -76,6 +75,19 @@ public class GroundTileSpawner : MonoBehaviour
             {
                 _currenTile = tile;
                 SpawnNewTile();
+            }
+        }
+    }
+
+    private void ClearOldTiles()
+    {
+        for (int i = 0; i < _groundTiles.Count; i++)
+        {
+            var tile = _groundTiles[i];
+            if (tile.transform.position.x < _currenTile.transform.position.x && Vector3.Distance(tile.transform.position, _currenTile.transform.position) >= _tileDestroyDistance)
+            {
+                _groundTiles.RemoveAt(i);
+                Destroy(tile.gameObject);
             }
         }
     }
