@@ -7,6 +7,11 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _speed;
     [SerializeField]
+    private float _agingSpeed;
+    [SerializeField]
+    private float _age;
+
+    [SerializeField]
     private TransformTracker _tracker;
 
     private bool _isRunning = false;
