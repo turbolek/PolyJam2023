@@ -46,7 +46,7 @@ public class RootController : MonoBehaviour
 
     private void Update()
     {
-        if (!_usedUp && _heldPlayer != null && Time.time >= _holdStartTime + _holdTime)
+        if (_heldPlayer != null && Time.time >= _holdStartTime + _holdTime)
         {
             ReleasePlayer();
         }

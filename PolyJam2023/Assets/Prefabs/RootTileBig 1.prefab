@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 5947114042938776529}
   - component: {fileID: 1430017011604020794}
   - component: {fileID: 6682427174475862537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 4626228819145286907}
   - component: {fileID: 4626228819145286904}
   - component: {fileID: 7036530069354206810}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RootTileBig 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
