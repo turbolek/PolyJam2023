@@ -56,6 +56,9 @@ MonoBehaviour:
     - Name: AvatarSprite
       Entry: 10
       Data: 0
+    - Name: PointsPerSecond
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -83,6 +86,9 @@ MonoBehaviour:
     - Name: AvatarSprite
       Entry: 10
       Data: 1
+    - Name: PointsPerSecond
+      Entry: 4
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -110,6 +116,9 @@ MonoBehaviour:
     - Name: AvatarSprite
       Entry: 10
       Data: 2
+    - Name: PointsPerSecond
+      Entry: 4
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -137,6 +146,9 @@ MonoBehaviour:
     - Name: AvatarSprite
       Entry: 10
       Data: 3
+    - Name: PointsPerSecond
+      Entry: 4
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -164,6 +176,9 @@ MonoBehaviour:
     - Name: AvatarSprite
       Entry: 10
       Data: 4
+    - Name: PointsPerSecond
+      Entry: 4
+      Data: 16
     - Name: 
       Entry: 8
       Data: 

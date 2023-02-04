@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private PlayerAgingData _playerAgingData;
     private AgeData _currentAgeData;
+    public AgeData CurrentAgeData => _currentAgeData;
     [SerializeField]
     private float _agingSpeed;
     private float _age;

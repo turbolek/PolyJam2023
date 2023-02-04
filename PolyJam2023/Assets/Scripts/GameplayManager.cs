@@ -33,6 +33,13 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private BackgroundElement[] _backgroundElementPrefabs;
 
+    [SerializeField]
+    private TMP_Text _scoreValue;
+    [SerializeField]
+    private TMP_Text _scoreLabel;
+
+    private float _score;
+
     private void Start()
     {
         _inputAsset = new MyInputAsset();
@@ -85,6 +92,7 @@ public class GameplayManager : MonoBehaviour
 
     private void ResetGame()
     {
+        _score = 0f;
         Time.timeScale = 1f;
         _inputAsset.GameControls.Restart.Disable();
 
@@ -108,6 +116,15 @@ public class GameplayManager : MonoBehaviour
         foreach (BackgroundElement backgroundprefab in _backgroundElementPrefabs)
         {
             Instantiate(backgroundprefab, _spawnedContentParent);
+        }
+    }
+
+    private void Update()
+    {
+        if (_currentPlayer.IsAlive)
+        {
+            _score += _currentPlayer.CurrentAgeData.PointsPerSecond * Time.deltaTime;
+            _scoreValue.text = _score.ToString("F0");
         }
     }
 }
