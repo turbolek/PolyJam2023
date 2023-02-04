@@ -103,8 +103,9 @@ public class Player : MonoBehaviour
 
         if (canJump)
         {
+            Debug.Log("JumpCount: " + _jumpCount);
             Vector2 jumpVector = new Vector2(0f, _currentAgeData.JumpForce);
-            _rigidbody2D.AddForce(jumpVector, ForceMode2D.Impulse);
+            _rigidbody2D.velocity = jumpVector;
             _jumpCount++;
         }
     }
@@ -131,7 +132,7 @@ public class Player : MonoBehaviour
 
     private bool CheckIfOnGround()
     {
-        return _groundTilesInTouch.Count > 0;
+        return _rigidbody2D.velocity.y == 0 && _groundTilesInTouch.Count > 0;
     }
 
     private void HandleJumpGravity()

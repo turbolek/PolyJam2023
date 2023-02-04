@@ -43,6 +43,8 @@ public class GameplayManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         _gameOverLabel.gameObject.SetActive(true);
+        _inputAsset.GameControls.Disable();
+        _inputAsset.PlayerControls.Disable();
     }
 
     private void DieAndRespawn()

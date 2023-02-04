@@ -5,6 +5,8 @@ using UnityEngine;
 public class GroundTileSpawner : MonoBehaviour
 {
     [SerializeField]
+    private List<GroundTile> _initialTileSetup = new List<GroundTile>();
+    [SerializeField]
     private List<GroundTile> _groundTilePrefabs = new List<GroundTile>();
     [SerializeField]
     private int _tileCountLimit = 10;
@@ -19,10 +21,17 @@ public class GroundTileSpawner : MonoBehaviour
 
     public void SpawnInitialTiles()
     {
-        for (int i = 0; i < _tileCountLimit; i++)
+        int tilesToSpawn = _tileCountLimit;
+        for (int i = 0; i < _initialTileSetup.Count; i++)
         {
-            var randomPrefab = GetRandomTilePrefab();
-            SpawnTile(randomPrefab);
+            SpawnTile(_initialTileSetup[i]);
+            tilesToSpawn--;
+        }
+
+        while (tilesToSpawn > 0)
+        {
+            SpawnTile(GetRandomTilePrefab());
+            tilesToSpawn--;
         }
 
         _currenTile = _groundTiles[0];

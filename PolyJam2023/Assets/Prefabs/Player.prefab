@@ -370,7 +370,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7455218867193794129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,4 +386,3 @@ MonoBehaviour:
   _playerAgingData: {fileID: 11400000, guid: e4c49655b26ff8c448ab92914c1c5dfe, type: 2}
   _agingSpeed: 2
   _ageLabel: {fileID: 7455218865687665307}
-  _tracker: {fileID: 0}
