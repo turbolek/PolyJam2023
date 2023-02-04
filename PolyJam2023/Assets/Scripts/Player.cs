@@ -157,4 +157,9 @@ public class Player : MonoBehaviour
         _isRunning = false;
         _playerInput.Disable();
     }
+
+    private void OnDestroy()
+    {
+        _playerInput.Dispose();
+    }
 }

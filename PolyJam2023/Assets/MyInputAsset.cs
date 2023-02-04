@@ -63,6 +63,15 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Restart"",
+                    ""type"": ""Button"",
+                    ""id"": ""5abc023a-ae0e-4e40-bf5e-28830e6ca8aa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -74,6 +83,17 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Die"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad54a5ba-6bc3-44cc-b311-e30510f70e80"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Restart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -88,6 +108,7 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
         // GameControls
         m_GameControls = asset.FindActionMap("GameControls", throwIfNotFound: true);
         m_GameControls_Die = m_GameControls.FindAction("Die", throwIfNotFound: true);
+        m_GameControls_Restart = m_GameControls.FindAction("Restart", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -181,11 +202,13 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_GameControls;
     private IGameControlsActions m_GameControlsActionsCallbackInterface;
     private readonly InputAction m_GameControls_Die;
+    private readonly InputAction m_GameControls_Restart;
     public struct GameControlsActions
     {
         private @MyInputAsset m_Wrapper;
         public GameControlsActions(@MyInputAsset wrapper) { m_Wrapper = wrapper; }
         public InputAction @Die => m_Wrapper.m_GameControls_Die;
+        public InputAction @Restart => m_Wrapper.m_GameControls_Restart;
         public InputActionMap Get() { return m_Wrapper.m_GameControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -198,6 +221,9 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                 @Die.started -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnDie;
                 @Die.performed -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnDie;
                 @Die.canceled -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnDie;
+                @Restart.started -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnRestart;
+                @Restart.performed -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnRestart;
+                @Restart.canceled -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnRestart;
             }
             m_Wrapper.m_GameControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -205,6 +231,9 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                 @Die.started += instance.OnDie;
                 @Die.performed += instance.OnDie;
                 @Die.canceled += instance.OnDie;
+                @Restart.started += instance.OnRestart;
+                @Restart.performed += instance.OnRestart;
+                @Restart.canceled += instance.OnRestart;
             }
         }
     }
@@ -216,5 +245,6 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
     public interface IGameControlsActions
     {
         void OnDie(InputAction.CallbackContext context);
+        void OnRestart(InputAction.CallbackContext context);
     }
 }
