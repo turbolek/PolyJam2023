@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class HoleController : MonoBehaviour
 {
-    [SerializeField]
     private GameplayManager _gameplayManager;
+
+    private void Start()
+    {
+        _gameplayManager = FindObjectOfType<GameplayManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
