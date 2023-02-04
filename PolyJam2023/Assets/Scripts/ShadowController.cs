@@ -18,7 +18,12 @@ public class ShadowController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _gameplayManager.GameOver();
+        Player hitPlayer = collision.gameObject.GetComponent<Player>();
+
+        if (hitPlayer != null && hitPlayer.IsRunning)
+        {
+            _gameplayManager.GameOver();
+        }
     }
 
 }

@@ -28,6 +28,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "GameControls",
+            "id": "a956209c-cf3d-470b-9dd2-6d4f330e5229",
+            "actions": [
+                {
+                    "name": "Die",
+                    "type": "Button",
+                    "id": "1968dd62-0643-4c6d-9c06-b391e1789634",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "aadf27fc-586c-44bd-9677-76e189e82bf3",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Die",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

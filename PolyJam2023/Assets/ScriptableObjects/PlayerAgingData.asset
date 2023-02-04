@@ -50,6 +50,9 @@ MonoBehaviour:
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
+      Data: 2
     - Name: AvatarSprite
       Entry: 10
       Data: 0
@@ -73,6 +76,9 @@ MonoBehaviour:
       Data: 5
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10
@@ -98,6 +104,9 @@ MonoBehaviour:
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
+      Data: 2
     - Name: AvatarSprite
       Entry: 10
       Data: 2
@@ -122,6 +131,9 @@ MonoBehaviour:
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
+      Data: 2
     - Name: AvatarSprite
       Entry: 10
       Data: 3
@@ -145,6 +157,9 @@ MonoBehaviour:
       Data: 5
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10

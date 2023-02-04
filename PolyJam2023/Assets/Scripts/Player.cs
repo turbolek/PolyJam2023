@@ -17,12 +17,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private TMP_Text _ageLabel;
 
-    [SerializeField]
-    private TransformTracker _tracker;
-
     private SpriteRenderer _spriteRenderer;
 
     private bool _isRunning = false;
+    public bool IsRunning => _isRunning;
 
     private MyInputAsset _playerInput;
 
@@ -31,9 +29,14 @@ public class Player : MonoBehaviour
     private List<GroundTile> _groundTilesInTouch = new List<GroundTile>();
     private bool _jumpButtonDown = false;
 
+    private int _jumpCount = 0;
+
+    private Collider2D _collider;
+
     // Start is called before the first frame update
-    private void Start()
+    public void Init()
     {
+        _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -49,15 +52,12 @@ public class Player : MonoBehaviour
         {
             _jumpButtonDown = false;
         };
-
-        StartRunning();
     }
 
     public void StartRunning()
     {
         _playerInput.PlayerControls.Enable();
         HandleAge();
-        _tracker.AssignTransform(transform);
         _isRunning = true;
     }
 
@@ -72,6 +72,11 @@ public class Player : MonoBehaviour
             _ageLabel.text = "Age: " + _age.ToString("F0");
             HandleAge();
             HandleJumpGravity();
+
+            if (CheckIfOnGround())
+            {
+                _jumpCount = 0;
+            }
         }
     }
 
@@ -94,10 +99,13 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        if (CheckIfOnGround())
+        bool canJump = CheckIfOnGround() || _jumpCount < _currentAgeData.JumpComboLimit;
+
+        if (canJump)
         {
             Vector2 jumpVector = new Vector2(0f, _currentAgeData.JumpForce);
             _rigidbody2D.AddForce(jumpVector, ForceMode2D.Impulse);
+            _jumpCount++;
         }
     }
 
@@ -140,5 +148,12 @@ public class Player : MonoBehaviour
         {
             _rigidbody2D.gravityScale = 1f;
         }
+    }
+
+    public void Die()
+    {
+        _ageLabel.text = "Dead";
+        _isRunning = false;
+        _playerInput.Disable();
     }
 }
