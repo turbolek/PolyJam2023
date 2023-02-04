@@ -17,6 +17,7 @@ public class GameplayManager : MonoBehaviour
     private Transform _initialSpawnPoint;
 
     private Player _currentPlayer;
+    public Player CurrentPlayer => _currentPlayer;
 
     private MyInputAsset _inputAsset;
 

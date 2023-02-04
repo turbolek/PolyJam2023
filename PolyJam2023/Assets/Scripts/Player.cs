@@ -19,12 +19,14 @@ public class Player : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
-    private bool _isRunning = false;
-    public bool IsRunning => _isRunning;
+    public bool IsRunning = false;
+
+    public bool IsAlive = true;
 
     private MyInputAsset _playerInput;
 
     private Rigidbody2D _rigidbody2D;
+    public Rigidbody2D Rigidbody2D => _rigidbody2D;
 
     private List<GroundTile> _groundTilesInTouch = new List<GroundTile>();
     private bool _jumpButtonDown = false;
@@ -58,20 +60,24 @@ public class Player : MonoBehaviour
     {
         _playerInput.PlayerControls.Enable();
         HandleAge();
-        _isRunning = true;
+        IsRunning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_isRunning)
+        if (IsRunning)
         {
             Vector3 shift = Vector3.right * _currentAgeData.RunningSpeed * Time.deltaTime;
             transform.Translate(shift);
+            HandleJumpGravity();
+        }
+
+        if (IsAlive)
+        {
             _age += _agingSpeed * Time.deltaTime;
             _ageLabel.text = "Age: " + _age.ToString("F0");
             HandleAge();
-            HandleJumpGravity();
 
             if (CheckIfOnGround())
             {
@@ -100,6 +106,7 @@ public class Player : MonoBehaviour
     private void Jump()
     {
         bool canJump = CheckIfOnGround() || _jumpCount < _currentAgeData.JumpComboLimit;
+        canJump &= IsAlive && IsRunning;
 
         if (canJump)
         {
@@ -154,7 +161,8 @@ public class Player : MonoBehaviour
     public void Die()
     {
         _ageLabel.text = "Dead";
-        _isRunning = false;
+        IsRunning = false;
+        IsAlive = false;
         _playerInput.Disable();
     }
 

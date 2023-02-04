@@ -178,7 +178,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155610090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 0}
+  m_LocalPosition: {x: 0, y: -4.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -443,6 +443,7 @@ MonoBehaviour:
     - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
     - {fileID: 7036530069354206810, guid: e2725a028a6c4264392271490bf3a490, type: 3}
     - {fileID: 7036530069354206810, guid: 1d92756c12171904b80869a1fcb68aa2, type: 3}
+    - {fileID: 7036530069354206810, guid: c541116b9e93a454fb073ba071915500, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -454,7 +455,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|GroundTileSpawner+TileSpawnData, Assembly-CSharp
@@ -475,7 +476,7 @@ MonoBehaviour:
       Data: 1
     - Name: SpawnChance
       Entry: 4
-      Data: 25
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -487,7 +488,19 @@ MonoBehaviour:
       Data: 2
     - Name: SpawnChance
       Entry: 4
-      Data: 25
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|GroundTileSpawner+TileSpawnData, Assembly-CSharp
+    - Name: TilePrefab
+      Entry: 10
+      Data: 3
+    - Name: SpawnChance
+      Entry: 4
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -686,7 +699,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2db904e6b3ec76f4aa008b5e85cf388b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc55bc02157b9cc479854146a8c2e90f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1091,7 +1104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameplayManager: {fileID: 8837872109338635905}
-  _speed: 4.5
+  _speed: 3.5
+  _maxPlayerDistance: 20
 --- !u!212 &8837872110389707610
 SpriteRenderer:
   m_ObjectHideFlags: 0

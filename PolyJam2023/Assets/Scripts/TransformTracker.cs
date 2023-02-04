@@ -21,7 +21,7 @@ public class TransformTracker : MonoBehaviour
         _xOffset = targetTransform.position.x - transform.position.x;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (_transformToTrack != null)
         {
