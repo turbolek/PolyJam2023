@@ -94,10 +94,10 @@ MonoBehaviour:
       Data: 20
     - Name: RunningSpeed
       Entry: 4
-      Data: 6
+      Data: 6.5
     - Name: JumpForce
       Entry: 4
-      Data: 8
+      Data: 6
     - Name: FallGravity
       Entry: 4
       Data: 5
