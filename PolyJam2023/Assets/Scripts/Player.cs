@@ -10,12 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private PlayerAgingData _playerAgingData;
     private AgeData _currentAgeData;
+    public AgeData CurrentAgeData => _currentAgeData;
     [SerializeField]
     private float _agingSpeed;
     private float _age;
-
-    [SerializeField]
-    private TMP_Text _ageLabel;
 
     private SpriteRenderer _spriteRenderer;
 
@@ -76,7 +74,6 @@ public class Player : MonoBehaviour
         if (IsAlive)
         {
             _age += _agingSpeed * Time.deltaTime;
-            _ageLabel.text = "Age: " + _age.ToString("F0");
             HandleAge();
 
             if (CheckIfOnGround())
@@ -164,7 +161,6 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        _ageLabel.text = "Dead";
         IsRunning = false;
         IsAlive = false;
         _playerInput.Disable();
