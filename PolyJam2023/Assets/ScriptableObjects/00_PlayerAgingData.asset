@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fba8fa589292dd40b26f6e8e579e1d0, type: 3}
-  m_Name: PlayerAgingData
+  m_Name: 00_PlayerAgingData
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
