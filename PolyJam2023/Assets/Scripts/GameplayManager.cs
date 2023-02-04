@@ -30,6 +30,9 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private ShadowController _shadowController;
 
+    [SerializeField]
+    private BackgroundElement[] _backgroundElementPrefabs;
+
     private void Start()
     {
         _inputAsset = new MyInputAsset();
@@ -96,6 +99,15 @@ public class GameplayManager : MonoBehaviour
         _gameOverLabel.gameObject.SetActive(false);
         _inputAsset.GameControls.Enable();
         _tileSpawner.SpawnInitialTiles();
+        SpawnbackgroundElements();
         DieAndRespawn();
+    }
+
+    private void SpawnbackgroundElements()
+    {
+        foreach (BackgroundElement backgroundprefab in _backgroundElementPrefabs)
+        {
+            Instantiate(backgroundprefab, _spawnedContentParent);
+        }
     }
 }

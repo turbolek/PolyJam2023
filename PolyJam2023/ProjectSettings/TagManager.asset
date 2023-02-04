@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - PlayerTrigger
   - Shadow
-  - 
-  - 
+  - BackgroundElement
+  - BackgroundTrigger
   - 
   - 
   - 
