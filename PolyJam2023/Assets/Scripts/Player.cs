@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -22,17 +23,32 @@ public class Player : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     private bool _isRunning = false;
-    private
+
+    private MyInputAsset _playerInput;
+
+    private Rigidbody2D _rigidbody2D;
+
+    private List<GroundTile> _groundTilesInTouch = new List<GroundTile>();
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+
+        _playerInput = new MyInputAsset();
+
+        _playerInput.PlayerControls.Jump.performed += ctx =>
+        {
+            Jump();
+        };
+
         StartRunning();
     }
 
     public void StartRunning()
     {
+        _playerInput.PlayerControls.Enable();
         HandleAge();
         _tracker.AssignTransform(transform);
         _isRunning = true;
@@ -66,5 +82,39 @@ public class Player : MonoBehaviour
         }
 
         _spriteRenderer.sprite = _currentAgeData.AvatarSprite;
+    }
+
+    private void Jump()
+    {
+        if (CheckIfOnGround())
+        {
+            Vector2 jumpVector = new Vector2(0f, _currentAgeData.JumpForce);
+            _rigidbody2D.AddForce(jumpVector, ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GroundTile groundTile = collision.collider.GetComponent<GroundTile>();
+
+        if (groundTile != null && !_groundTilesInTouch.Contains(groundTile))
+        {
+            _groundTilesInTouch.Add(groundTile);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        GroundTile groundTile = collision.collider.GetComponent<GroundTile>();
+
+        if (groundTile != null && _groundTilesInTouch.Contains(groundTile))
+        {
+            _groundTilesInTouch.Remove(groundTile);
+        }
+    }
+
+    private bool CheckIfOnGround()
+    {
+        return _groundTilesInTouch.Count > 0;
     }
 }

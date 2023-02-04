@@ -37,6 +37,9 @@ MonoBehaviour:
     - Name: RunningSpeed
       Entry: 4
       Data: 10
+    - Name: JumpForce
+      Entry: 4
+      Data: 10
     - Name: AvatarSprite
       Entry: 10
       Data: 0
@@ -52,6 +55,9 @@ MonoBehaviour:
     - Name: RunningSpeed
       Entry: 4
       Data: 7
+    - Name: JumpForce
+      Entry: 4
+      Data: 10
     - Name: AvatarSprite
       Entry: 10
       Data: 0
@@ -67,6 +73,9 @@ MonoBehaviour:
     - Name: RunningSpeed
       Entry: 4
       Data: 4
+    - Name: JumpForce
+      Entry: 4
+      Data: 10
     - Name: AvatarSprite
       Entry: 10
       Data: 0
@@ -82,6 +91,9 @@ MonoBehaviour:
     - Name: RunningSpeed
       Entry: 4
       Data: 2
+    - Name: JumpForce
+      Entry: 4
+      Data: 10
     - Name: AvatarSprite
       Entry: 10
       Data: 0
