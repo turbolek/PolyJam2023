@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameplayManager: {fileID: 0}
+  _holdTime: 2
 --- !u!1 &4626228819145286905
 GameObject:
   m_ObjectHideFlags: 0

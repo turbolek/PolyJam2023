@@ -11,7 +11,7 @@ public class HoleController : MonoBehaviour
     {
         Player hitPlayer = collision.gameObject.GetComponent<Player>();
 
-        if (hitPlayer != null && hitPlayer.IsRunning)
+        if (hitPlayer != null && hitPlayer.IsAlive)
         {
             _gameplayManager.GameOver();
         }
