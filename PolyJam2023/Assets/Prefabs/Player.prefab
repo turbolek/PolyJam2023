@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7455218865687665306}
   - component: {fileID: 7455218865687665304}
   - component: {fileID: 7455218865687665307}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: AgeLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7455218866386369997}
   - component: {fileID: 7455218866386369996}
   - component: {fileID: 7455218866386369999}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 7455218867193794128}
   - component: {fileID: 7455218867193794131}
   - component: {fileID: 7455218867193794129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,3 +386,5 @@ MonoBehaviour:
   _playerAgingData: {fileID: 11400000, guid: e4c49655b26ff8c448ab92914c1c5dfe, type: 2}
   _agingSpeed: 1
   _ageLabel: {fileID: 7455218865687665307}
+  IsRunning: 0
+  IsAlive: 1

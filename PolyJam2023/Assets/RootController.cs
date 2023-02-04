@@ -32,6 +32,7 @@ public class RootController : MonoBehaviour
     private void StartHolding()
     {
         _heldPlayer.IsRunning = false;
+        _usedUp = true;
         _holdStartTime = Time.time;
         _heldPlayer.Rigidbody2D.velocity = Vector2.zero;
         _heldPlayer.Rigidbody2D.gravityScale = 0f;
@@ -41,7 +42,6 @@ public class RootController : MonoBehaviour
     {
         _heldPlayer.IsRunning = _heldPlayer.IsAlive;
         _heldPlayer = null;
-        _usedUp = true;
     }
 
     private void Update()
