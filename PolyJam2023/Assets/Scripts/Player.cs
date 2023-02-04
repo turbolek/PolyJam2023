@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     private List<GroundTile> _groundTilesInTouch = new List<GroundTile>();
+    private bool _jumpButtonDown = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -40,7 +41,13 @@ public class Player : MonoBehaviour
 
         _playerInput.PlayerControls.Jump.performed += ctx =>
         {
+            _jumpButtonDown = true;
             Jump();
+        };
+
+        _playerInput.PlayerControls.Jump.canceled += ctx =>
+        {
+            _jumpButtonDown = false;
         };
 
         StartRunning();
@@ -64,6 +71,7 @@ public class Player : MonoBehaviour
             _age += _agingSpeed * Time.deltaTime;
             _ageLabel.text = "Age: " + _age.ToString("F0");
             HandleAge();
+            HandleJumpGravity();
         }
     }
 
@@ -116,5 +124,21 @@ public class Player : MonoBehaviour
     private bool CheckIfOnGround()
     {
         return _groundTilesInTouch.Count > 0;
+    }
+
+    private void HandleJumpGravity()
+    {
+        if (_rigidbody2D.velocity.y < 0)
+        {
+            _rigidbody2D.gravityScale = _currentAgeData.FallGravity;
+        }
+        else if (_rigidbody2D.velocity.y > 0 && !_jumpButtonDown)
+        {
+            _rigidbody2D.gravityScale = _currentAgeData.LowJumpGravity;
+        }
+        else
+        {
+            _rigidbody2D.gravityScale = 1f;
+        }
     }
 }
