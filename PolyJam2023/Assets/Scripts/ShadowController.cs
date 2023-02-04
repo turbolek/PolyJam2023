@@ -10,6 +10,14 @@ public class ShadowController : MonoBehaviour
     [SerializeField]
     private float _speed;
 
+    private Vector3 _initialPosition;
+
+    public void Init()
+    {
+        _initialPosition = transform.position;
+
+    }
+
     private void Update()
     {
         Vector3 shift = Vector3.right * _speed * Time.deltaTime;
@@ -26,4 +34,8 @@ public class ShadowController : MonoBehaviour
         }
     }
 
+    public void ResetPosition()
+    {
+        transform.position = _initialPosition;
+    }
 }

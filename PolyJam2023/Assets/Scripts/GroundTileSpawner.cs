@@ -27,25 +27,30 @@ public class GroundTileSpawner : SerializedMonoBehaviour
     private List<GroundTile> _groundTiles = new List<GroundTile>();
     private GroundTile _currenTile;
 
+    [SerializeField]
+    private Transform _tileParent;
+
     public void SpawnInitialTiles()
     {
+        _groundTiles.Clear();
+
         int tilesToSpawn = _tileCountLimit;
         for (int i = 0; i < _initialTileSetup.Count; i++)
         {
-            SpawnTile(_initialTileSetup[i]);
+            SpawnTile(_initialTileSetup[i], _tileParent);
             tilesToSpawn--;
         }
 
         while (tilesToSpawn > 0)
         {
-            SpawnTile(GetRandomTilePrefab());
+            SpawnTile(GetRandomTilePrefab(), _tileParent);
             tilesToSpawn--;
         }
 
         _currenTile = _groundTiles[0];
     }
 
-    private void SpawnTile(GroundTile _tilePrefab)
+    private void SpawnTile(GroundTile _tilePrefab, Transform tileParent)
     {
         GroundTile lastTile = null;
 
@@ -54,7 +59,7 @@ public class GroundTileSpawner : SerializedMonoBehaviour
             lastTile = _groundTiles[_groundTiles.Count - 1];
         }
 
-        GroundTile newTile = Instantiate(_tilePrefab, transform);
+        GroundTile newTile = Instantiate(_tilePrefab, tileParent);
         _groundTiles.Add(newTile);
 
         if (lastTile != null)
@@ -69,7 +74,7 @@ public class GroundTileSpawner : SerializedMonoBehaviour
     {
 
         var randomPrefab = GetRandomTilePrefab();
-        SpawnTile(randomPrefab);
+        SpawnTile(randomPrefab, _tileParent);
 
         ClearOldTiles();
     }
