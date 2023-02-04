@@ -40,7 +40,7 @@ MonoBehaviour:
       Data: 0
     - Name: RunningSpeed
       Entry: 4
-      Data: 10
+      Data: 8
     - Name: JumpForce
       Entry: 4
       Data: 8
@@ -67,7 +67,7 @@ MonoBehaviour:
       Data: 10
     - Name: RunningSpeed
       Entry: 4
-      Data: 11
+      Data: 9
     - Name: JumpForce
       Entry: 4
       Data: 9
@@ -97,7 +97,7 @@ MonoBehaviour:
       Data: 6
     - Name: JumpForce
       Entry: 4
-      Data: 9
+      Data: 8
     - Name: FallGravity
       Entry: 4
       Data: 5
@@ -124,7 +124,7 @@ MonoBehaviour:
       Data: 4
     - Name: JumpForce
       Entry: 4
-      Data: 6
+      Data: 5
     - Name: FallGravity
       Entry: 4
       Data: 4
@@ -148,10 +148,10 @@ MonoBehaviour:
       Data: 60
     - Name: RunningSpeed
       Entry: 4
-      Data: 2
+      Data: 2.5
     - Name: JumpForce
       Entry: 4
-      Data: 5
+      Data: 4
     - Name: FallGravity
       Entry: 4
       Data: 3
