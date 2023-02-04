@@ -8,5 +8,6 @@ public class AgeData
     public float JumpForce;
     public float FallGravity;
     public float LowJumpGravity;
+    public int JumpComboLimit;
     public Sprite AvatarSprite;
 }

@@ -2,20 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShadowController : MonoBehaviour
+public class RootController : MonoBehaviour
 {
     [SerializeField]
     private GameplayManager _gameplayManager;
 
-    [SerializeField]
-    private float _speed;
-
-    private void Update()
+    private void Start()
     {
-        Vector3 shift = Vector3.right * _speed * Time.deltaTime;
-        transform.Translate(shift);
+        _gameplayManager = FindObjectOfType<GameplayManager>();
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Player hitPlayer = collision.gameObject.GetComponent<Player>();
@@ -25,5 +20,4 @@ public class ShadowController : MonoBehaviour
             _gameplayManager.GameOver();
         }
     }
-
 }

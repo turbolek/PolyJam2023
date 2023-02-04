@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TransformTracker : MonoBehaviour
 {
-    [SerializeField]
     private Transform _transformToTrack;
     private Vector3 _initaialPosition;
 
@@ -23,6 +22,9 @@ public class TransformTracker : MonoBehaviour
 
     private void Update()
     {
-        transform.position = new Vector3(_transformToTrack.position.x - _xOffset, _initaialPosition.y, _initaialPosition.z);
+        if (_transformToTrack != null)
+        {
+            transform.position = new Vector3(_transformToTrack.position.x - _xOffset, _initaialPosition.y, _initaialPosition.z);
+        }
     }
 }

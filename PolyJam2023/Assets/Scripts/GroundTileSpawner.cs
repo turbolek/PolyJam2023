@@ -1,11 +1,21 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundTileSpawner : MonoBehaviour
+public class GroundTileSpawner : SerializedMonoBehaviour
 {
     [SerializeField]
-    private List<GroundTile> _groundTilePrefabs = new List<GroundTile>();
+    private List<GroundTile> _initialTileSetup = new List<GroundTile>();
+    [SerializeField]
+    private List<TileSpawnData> _groundTilePrefabs = new List<TileSpawnData>();
+
+    public class TileSpawnData
+    {
+        public GroundTile TilePrefab;
+        public float SpawnChance;
+    }
+
     [SerializeField]
     private int _tileCountLimit = 10;
     [SerializeField]
@@ -19,10 +29,17 @@ public class GroundTileSpawner : MonoBehaviour
 
     public void SpawnInitialTiles()
     {
-        for (int i = 0; i < _tileCountLimit; i++)
+        int tilesToSpawn = _tileCountLimit;
+        for (int i = 0; i < _initialTileSetup.Count; i++)
         {
-            var randomPrefab = GetRandomTilePrefab();
-            SpawnTile(randomPrefab);
+            SpawnTile(_initialTileSetup[i]);
+            tilesToSpawn--;
+        }
+
+        while (tilesToSpawn > 0)
+        {
+            SpawnTile(GetRandomTilePrefab());
+            tilesToSpawn--;
         }
 
         _currenTile = _groundTiles[0];
@@ -59,9 +76,26 @@ public class GroundTileSpawner : MonoBehaviour
 
     public GroundTile GetRandomTilePrefab()
     {
-        GroundTile _randomPrefab = _groundTilePrefabs[Random.Range(0, _groundTilePrefabs.Count)];
-        return _randomPrefab;
+        float chanceSum = 0f;
 
+        foreach (TileSpawnData spawnData in _groundTilePrefabs)
+        {
+            chanceSum += spawnData.SpawnChance;
+        }
+
+        float chanceRoll = Random.Range(0f, chanceSum);
+        float coveredChance = 0f;
+
+        foreach (TileSpawnData spawnData in _groundTilePrefabs)
+        {
+            coveredChance += spawnData.SpawnChance;
+            if (coveredChance >= chanceRoll)
+            {
+                return spawnData.TilePrefab;
+            }
+        }
+
+        return null;
     }
 
     private void OnGroundTileEntered(GroundTile tile)

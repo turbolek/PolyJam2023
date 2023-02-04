@@ -50,6 +50,34 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""GameControls"",
+            ""id"": ""a956209c-cf3d-470b-9dd2-6d4f330e5229"",
+            ""actions"": [
+                {
+                    ""name"": ""Die"",
+                    ""type"": ""Button"",
+                    ""id"": ""1968dd62-0643-4c6d-9c06-b391e1789634"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""aadf27fc-586c-44bd-9677-76e189e82bf3"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Die"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -57,6 +85,9 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
         // PlayerControls
         m_PlayerControls = asset.FindActionMap("PlayerControls", throwIfNotFound: true);
         m_PlayerControls_Jump = m_PlayerControls.FindAction("Jump", throwIfNotFound: true);
+        // GameControls
+        m_GameControls = asset.FindActionMap("GameControls", throwIfNotFound: true);
+        m_GameControls_Die = m_GameControls.FindAction("Die", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -145,8 +176,45 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
         }
     }
     public PlayerControlsActions @PlayerControls => new PlayerControlsActions(this);
+
+    // GameControls
+    private readonly InputActionMap m_GameControls;
+    private IGameControlsActions m_GameControlsActionsCallbackInterface;
+    private readonly InputAction m_GameControls_Die;
+    public struct GameControlsActions
+    {
+        private @MyInputAsset m_Wrapper;
+        public GameControlsActions(@MyInputAsset wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Die => m_Wrapper.m_GameControls_Die;
+        public InputActionMap Get() { return m_Wrapper.m_GameControls; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GameControlsActions set) { return set.Get(); }
+        public void SetCallbacks(IGameControlsActions instance)
+        {
+            if (m_Wrapper.m_GameControlsActionsCallbackInterface != null)
+            {
+                @Die.started -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnDie;
+                @Die.performed -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnDie;
+                @Die.canceled -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnDie;
+            }
+            m_Wrapper.m_GameControlsActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Die.started += instance.OnDie;
+                @Die.performed += instance.OnDie;
+                @Die.canceled += instance.OnDie;
+            }
+        }
+    }
+    public GameControlsActions @GameControls => new GameControlsActions(this);
     public interface IPlayerControlsActions
     {
         void OnJump(InputAction.CallbackContext context);
+    }
+    public interface IGameControlsActions
+    {
+        void OnDie(InputAction.CallbackContext context);
     }
 }
