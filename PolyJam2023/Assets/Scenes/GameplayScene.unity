@@ -270,6 +270,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4e6ce2d7af9434387b91fd062f29a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
+    - {fileID: 7036530069354206810, guid: e2725a028a6c4264392271490bf3a490, type: 3}
+    - {fileID: 7036530069354206810, guid: 1d92756c12171904b80869a1fcb68aa2, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _groundTilePrefabs
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[GroundTileSpawner+TileSpawnData,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|GroundTileSpawner+TileSpawnData, Assembly-CSharp
+    - Name: TilePrefab
+      Entry: 10
+      Data: 0
+    - Name: SpawnChance
+      Entry: 4
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|GroundTileSpawner+TileSpawnData, Assembly-CSharp
+    - Name: TilePrefab
+      Entry: 10
+      Data: 1
+    - Name: SpawnChance
+      Entry: 4
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|GroundTileSpawner+TileSpawnData, Assembly-CSharp
+    - Name: TilePrefab
+      Entry: 10
+      Data: 2
+    - Name: SpawnChance
+      Entry: 4
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   _initialTileSetup:
   - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
   - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
@@ -281,9 +342,6 @@ MonoBehaviour:
   - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
   - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
   - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
-  _groundTilePrefabs:
-  - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
-  - {fileID: 7036530069354206810, guid: e2725a028a6c4264392271490bf3a490, type: 3}
   _tileCountLimit: 8
   _tileWidth: 2.35
   _tileDestroyDistance: 15
