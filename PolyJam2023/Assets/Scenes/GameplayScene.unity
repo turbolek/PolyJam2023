@@ -475,7 +475,7 @@ MonoBehaviour:
       Data: 1
     - Name: SpawnChance
       Entry: 4
-      Data: 25
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -487,7 +487,7 @@ MonoBehaviour:
       Data: 2
     - Name: SpawnChance
       Entry: 4
-      Data: 25
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
