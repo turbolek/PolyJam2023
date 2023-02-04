@@ -39,7 +39,7 @@ MonoBehaviour:
       Data: 6
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 9
     - Name: FallGravity
       Entry: 4
       Data: 5

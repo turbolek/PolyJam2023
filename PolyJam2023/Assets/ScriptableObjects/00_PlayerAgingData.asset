@@ -40,13 +40,13 @@ MonoBehaviour:
       Data: 0
     - Name: RunningSpeed
       Entry: 4
-      Data: 6
+      Data: 10
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 8
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
@@ -64,16 +64,16 @@ MonoBehaviour:
       Data: 2|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: RunningSpeed
       Entry: 4
-      Data: 5
+      Data: 11
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 9
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
@@ -91,13 +91,13 @@ MonoBehaviour:
       Data: 3|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 10
+      Data: 20
     - Name: RunningSpeed
       Entry: 4
-      Data: 4
+      Data: 6
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 9
     - Name: FallGravity
       Entry: 4
       Data: 5
@@ -118,16 +118,16 @@ MonoBehaviour:
       Data: 4|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 15
+      Data: 35
     - Name: RunningSpeed
       Entry: 4
-      Data: 3
+      Data: 4
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 6
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 4
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
@@ -145,16 +145,16 @@ MonoBehaviour:
       Data: 5|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 20
+      Data: 60
     - Name: RunningSpeed
       Entry: 4
       Data: 2
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 5
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 3
     - Name: LowJumpGravity
       Entry: 4
       Data: 2

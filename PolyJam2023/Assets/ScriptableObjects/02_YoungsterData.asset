@@ -36,13 +36,13 @@ MonoBehaviour:
       Data: 0
     - Name: RunningSpeed
       Entry: 4
-      Data: 6
+      Data: 11
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 9
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: LowJumpGravity
       Entry: 4
       Data: 2
