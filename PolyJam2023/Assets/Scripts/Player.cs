@@ -92,7 +92,11 @@ public class Player : MonoBehaviour
         {
             if (ageData.AgeThreshold <= _age)
             {
-                _currentAgeData = ageData;
+                if (_currentAgeData != ageData)
+                {
+                    _currentAgeData = ageData;
+
+                }
             }
             else
             {
