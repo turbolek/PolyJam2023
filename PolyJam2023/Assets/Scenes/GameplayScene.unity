@@ -1104,7 +1104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameplayManager: {fileID: 8837872109338635905}
-  _speed: 5
+  _speed: 3.5
+  _maxPlayerDistance: 20
 --- !u!212 &8837872110389707610
 SpriteRenderer:
   m_ObjectHideFlags: 0
