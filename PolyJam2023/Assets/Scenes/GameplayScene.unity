@@ -443,6 +443,7 @@ MonoBehaviour:
     - {fileID: 7036530069354206810, guid: 653fdf91e3b23814a9703579a409fe16, type: 3}
     - {fileID: 7036530069354206810, guid: e2725a028a6c4264392271490bf3a490, type: 3}
     - {fileID: 7036530069354206810, guid: 1d92756c12171904b80869a1fcb68aa2, type: 3}
+    - {fileID: 7036530069354206810, guid: c541116b9e93a454fb073ba071915500, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -454,7 +455,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 3
+      Data: 4
     - Name: 
       Entry: 7
       Data: 1|GroundTileSpawner+TileSpawnData, Assembly-CSharp
@@ -475,7 +476,7 @@ MonoBehaviour:
       Data: 1
     - Name: SpawnChance
       Entry: 4
-      Data: 10
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -487,7 +488,19 @@ MonoBehaviour:
       Data: 2
     - Name: SpawnChance
       Entry: 4
-      Data: 0
+      Data: 15
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|GroundTileSpawner+TileSpawnData, Assembly-CSharp
+    - Name: TilePrefab
+      Entry: 10
+      Data: 3
+    - Name: SpawnChance
+      Entry: 4
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -1091,7 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameplayManager: {fileID: 8837872109338635905}
-  _speed: 4.5
+  _speed: 5
 --- !u!212 &8837872110389707610
 SpriteRenderer:
   m_ObjectHideFlags: 0
