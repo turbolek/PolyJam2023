@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class AudioManager : MonoBehaviour
 {
     private static readonly string FirstPlay = "FirstPlay";
@@ -36,6 +37,8 @@ public class AudioManager : MonoBehaviour
             soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
             soundEffectsSlider.value = soundEffectsFloat;
         }
+
+        DontDestroyOnLoad(this.gameObject);
     }
     public void SaveSoundSettings()
     {

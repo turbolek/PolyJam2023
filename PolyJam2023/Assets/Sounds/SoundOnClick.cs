@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SoundOnClick : MonoBehaviour
 {
-
     public AudioSource soundPlayer;
 
     // Start is called before the first frame update
