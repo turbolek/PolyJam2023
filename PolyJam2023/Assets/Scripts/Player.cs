@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     public void Init()
     {
         _collider = GetComponent<Collider2D>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
 
         _playerInput = new MyInputAsset();
