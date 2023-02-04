@@ -67,7 +67,7 @@ MonoBehaviour:
       Data: 2|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 10
+      Data: 5
     - Name: RunningSpeed
       Entry: 4
       Data: 9
@@ -97,7 +97,7 @@ MonoBehaviour:
       Data: 3|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 20
+      Data: 10
     - Name: RunningSpeed
       Entry: 4
       Data: 6.5
@@ -127,7 +127,7 @@ MonoBehaviour:
       Data: 4|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 35
+      Data: 15
     - Name: RunningSpeed
       Entry: 4
       Data: 4
@@ -157,7 +157,7 @@ MonoBehaviour:
       Data: 5|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 60
+      Data: 20
     - Name: RunningSpeed
       Entry: 4
       Data: 2.5
