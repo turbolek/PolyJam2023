@@ -10,6 +10,14 @@ public class ShadowController : MonoBehaviour
     [SerializeField]
     private float _speed;
 
+    private Vector3 _initialPosition;
+
+    public void Init()
+    {
+        _initialPosition = transform.position;
+
+    }
+
     private void Update()
     {
         Vector3 shift = Vector3.right * _speed * Time.deltaTime;
@@ -18,7 +26,16 @@ public class ShadowController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        _gameplayManager.GameOver();
+        Player hitPlayer = collision.gameObject.GetComponent<Player>();
+
+        if (hitPlayer != null && hitPlayer.IsRunning)
+        {
+            _gameplayManager.GameOver();
+        }
     }
 
+    public void ResetPosition()
+    {
+        transform.position = _initialPosition;
+    }
 }

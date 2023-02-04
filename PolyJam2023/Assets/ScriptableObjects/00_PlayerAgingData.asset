@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fba8fa589292dd40b26f6e8e579e1d0, type: 3}
-  m_Name: PlayerAgingData
+  m_Name: 00_PlayerAgingData
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 78f35d0507722ad4092966b57203bf42, type: 3}
+    - {fileID: 21300000, guid: a9ea9c638c50739488e4e02a5bb6ae33, type: 3}
     - {fileID: 21300000, guid: 539583eb8e47feb4daa8374453f966c8, type: 3}
     - {fileID: 21300000, guid: 883c4540dd05a8447aa4eee696f0aef0, type: 3}
     - {fileID: 21300000, guid: a37ff7d2fbb6b1945a247ecca10dfe71, type: 3}
@@ -43,12 +43,15 @@ MonoBehaviour:
       Data: 10
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 8
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10
@@ -61,18 +64,21 @@ MonoBehaviour:
       Data: 2|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: RunningSpeed
       Entry: 4
-      Data: 8
+      Data: 11
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 9
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 10
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10
@@ -85,18 +91,21 @@ MonoBehaviour:
       Data: 3|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 10
+      Data: 20
     - Name: RunningSpeed
       Entry: 4
       Data: 6
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 9
     - Name: FallGravity
       Entry: 4
       Data: 5
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10
@@ -109,18 +118,21 @@ MonoBehaviour:
       Data: 4|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 15
+      Data: 35
     - Name: RunningSpeed
       Entry: 4
       Data: 4
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 6
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 4
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10
@@ -133,18 +145,21 @@ MonoBehaviour:
       Data: 5|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
-      Data: 20
+      Data: 60
     - Name: RunningSpeed
       Entry: 4
       Data: 2
     - Name: JumpForce
       Entry: 4
-      Data: 7
+      Data: 5
     - Name: FallGravity
       Entry: 4
-      Data: 5
+      Data: 3
     - Name: LowJumpGravity
       Entry: 4
+      Data: 2
+    - Name: JumpComboLimit
+      Entry: 3
       Data: 2
     - Name: AvatarSprite
       Entry: 10
