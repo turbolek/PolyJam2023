@@ -62,7 +62,7 @@ MonoBehaviour:
       Data: 2
     - Name: JumpComboLimit
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: AvatarSprite
       Entry: 10
       Data: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
       Data: 2
     - Name: JumpComboLimit
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: AvatarSprite
       Entry: 10
       Data: 3
@@ -134,7 +134,7 @@ MonoBehaviour:
       Data: 2
     - Name: JumpComboLimit
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: AvatarSprite
       Entry: 10
       Data: 6
@@ -170,7 +170,7 @@ MonoBehaviour:
       Data: 2
     - Name: JumpComboLimit
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: AvatarSprite
       Entry: 10
       Data: 9
@@ -206,7 +206,7 @@ MonoBehaviour:
       Data: 2
     - Name: JumpComboLimit
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: AvatarSprite
       Entry: 10
       Data: 12
