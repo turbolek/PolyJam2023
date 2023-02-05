@@ -77,9 +77,9 @@ public class Player : MonoBehaviour
     public void StartRunning()
     {
         _playerInput.PlayerControls.Enable();
+        _referenceSpeed = 9f;
         HandleAge();
         ChangeSprite();
-        _referenceSpeed = _currentAgeData.RunningSpeed;
         IsRunning = true;
     }
 
@@ -122,6 +122,7 @@ public class Player : MonoBehaviour
                     _animator.SetTrigger("AgeUp");
                     _newSprite = _currentAgeData.AvatarSprite;
                     Debug.Log("Changing age");
+                     _animator.SetFloat("RelativeRunningSpeed", _currentAgeData.RunningSpeed / _referenceSpeed);
                 }
                 break;
             }
