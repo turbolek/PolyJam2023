@@ -13,6 +13,13 @@ public class RootController : MonoBehaviour
 
     private float _holdStartTime;
 
+    private AudioSource _audioSource;
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_usedUp)
@@ -31,6 +38,7 @@ public class RootController : MonoBehaviour
 
     private void StartHolding()
     {
+        _audioSource.Play();
         _heldPlayer.IsRunning = false;
         _usedUp = true;
         _holdStartTime = Time.time;
@@ -41,6 +49,7 @@ public class RootController : MonoBehaviour
 
     private void ReleasePlayer()
     {
+        _audioSource.Stop();
         _heldPlayer.IsRunning = _heldPlayer.IsAlive;
         _heldPlayer = null;
     }
