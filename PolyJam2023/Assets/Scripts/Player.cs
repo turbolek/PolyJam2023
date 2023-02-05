@@ -33,10 +33,15 @@ public class Player : MonoBehaviour
 
     private Collider2D _collider;
 
+    private Animator _animator;
+
+    private float _referenceSpeed;
+
 
     // Start is called before the first frame update
     public void Init()
     {
+        _animator = GetComponent<Animator>();
         _collider = GetComponent<Collider2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -59,6 +64,7 @@ public class Player : MonoBehaviour
     {
         _playerInput.PlayerControls.Enable();
         HandleAge();
+        _referenceSpeed = _currentAgeData.RunningSpeed;
         IsRunning = true;
     }
 
@@ -94,7 +100,6 @@ public class Player : MonoBehaviour
                 if (_currentAgeData != ageData)
                 {
                     _currentAgeData = ageData;
-
                 }
             }
             else
@@ -166,6 +171,10 @@ public class Player : MonoBehaviour
         IsRunning = false;
         IsAlive = false;
         _playerInput.Disable();
+        _animator.SetTrigger("Die");
+        _collider.enabled = false;
+        _rigidbody2D.velocity = Vector2.zero;
+        _rigidbody2D.gravityScale = 0.5f;
     }
 
     private void OnDestroy()
