@@ -222,4 +222,10 @@ public class Player : MonoBehaviour
         AudioClip footstepClip = _currentAgeData._footstepSound;
         _audioSource.PlayOneShot(footstepClip);
     }
+
+    public void PlayJumpSound()
+    {
+        AudioClip footstepClip = _currentAgeData.JumpSound;
+        _audioSource.PlayOneShot(footstepClip);
+    }
 }

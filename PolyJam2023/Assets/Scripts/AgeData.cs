@@ -12,4 +12,5 @@ public class AgeData
     public Sprite AvatarSprite;
     public float PointsPerSecond;
     public AudioClip _footstepSound;
+    public AudioClip JumpSound;
 }
