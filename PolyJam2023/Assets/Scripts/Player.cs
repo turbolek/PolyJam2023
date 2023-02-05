@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
     [SerializeField]
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
     private float _referenceSpeed;
 
     private Sprite _newSprite;
+
 
 
     // Start is called before the first frame update
@@ -212,4 +214,5 @@ public class Player : MonoBehaviour
     {
         _animator.SetTrigger("Struggle");
     }
+
 }
