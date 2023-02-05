@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
 
     private float _referenceSpeed;
 
+    private Sprite _newSprite;
+
 
     // Start is called before the first frame update
     public void Init()
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
     {
         _playerInput.PlayerControls.Enable();
         HandleAge();
+        ChangeSprite();
         _referenceSpeed = _currentAgeData.RunningSpeed;
         IsRunning = true;
     }
@@ -93,22 +96,22 @@ public class Player : MonoBehaviour
 
     private void HandleAge()
     {
-        foreach (AgeData ageData in _playerAgingData.AgeDataList)
+        for (int i = _playerAgingData.AgeDataList.Count - 1; i >= 0; i--)
         {
+            var ageData = _playerAgingData.AgeDataList[i];
+
             if (ageData.AgeThreshold <= _age)
             {
                 if (_currentAgeData != ageData)
                 {
                     _currentAgeData = ageData;
+                    _animator.SetTrigger("AgeUp");
+                    _newSprite = _currentAgeData.AvatarSprite;
+                    Debug.Log("Changing age");
                 }
-            }
-            else
-            {
                 break;
             }
         }
-
-        _spriteRenderer.sprite = _currentAgeData.AvatarSprite;
     }
 
     private void Jump()
@@ -175,6 +178,11 @@ public class Player : MonoBehaviour
         _collider.enabled = false;
         _rigidbody2D.velocity = Vector2.zero;
         _rigidbody2D.gravityScale = 0.5f;
+    }
+
+    public void ChangeSprite()
+    {
+        _spriteRenderer.sprite = _newSprite;
     }
 
     private void OnDestroy()
