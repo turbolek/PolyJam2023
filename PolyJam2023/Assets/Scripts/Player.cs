@@ -51,6 +51,8 @@ public class Player : MonoBehaviour
 
     private Sprite _newSprite;
 
+    private bool _wasEverOnGround = false;
+
 
     // Start is called before the first frame update
     public void Init()
@@ -131,7 +133,7 @@ public class Player : MonoBehaviour
 
     private void Jump()
     {
-        bool canJump = CheckIfOnGround() || _jumpCount < _currentAgeData.JumpComboLimit;
+        bool canJump = _wasEverOnGround && (CheckIfOnGround() || _jumpCount < _currentAgeData.JumpComboLimit);
         canJump &= IsAlive && IsRunning;
 
         if (canJump)
@@ -172,7 +174,9 @@ public class Player : MonoBehaviour
 
     private bool CheckIfOnGround()
     {
-        return _rigidbody2D.velocity.y == 0 && _groundTilesInTouch.Count > 0;
+        bool onGround = _rigidbody2D.velocity.y == 0 && _groundTilesInTouch.Count > 0;
+        _wasEverOnGround |= onGround;
+        return onGround;
     }
 
     private void HandleJumpGravity()
