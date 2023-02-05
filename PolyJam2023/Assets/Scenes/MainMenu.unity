@@ -266,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &95641138
 Transform:
   m_ObjectHideFlags: 0
@@ -3074,7 +3074,7 @@ MonoBehaviour:
 
     Wiktor Waszczuk
 
-    
+
 
     a.k.a.
     Zieloni'
@@ -4397,7 +4397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1807446289
 Transform:
   m_ObjectHideFlags: 0
@@ -4626,7 +4626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2146197577}
   - component: {fileID: 2146197578}
-  - component: {fileID: 2146197579}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -4669,24 +4668,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 305203273}
   soundEffectsSlider: {fileID: 1292906813}
-  backgroundAudio: {fileID: 0}
+  backgroundAudio: {fileID: 1599665355}
   soundEffectsAudio:
   - {fileID: 1719918113}
   - {fileID: 1357709834}
   - {fileID: 1238368294}
---- !u!114 &2146197579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2146197575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65b236d540914844949b3ef534f2da5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MusicClips:
-  - {fileID: 8300000, guid: 7eab72076625915449334bc83a08c6d6, type: 3}
-  - {fileID: 8300000, guid: 56c57e08867ab7942879390f458dc1a1, type: 3}
-  Audio: {fileID: 0}
