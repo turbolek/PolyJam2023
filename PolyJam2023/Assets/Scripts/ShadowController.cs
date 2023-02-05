@@ -14,10 +14,15 @@ public class ShadowController : MonoBehaviour
 
     private Vector3 _initialPosition;
 
+    private AudioSource _audioSource;
+
+    [SerializeField]
+    private float _volumeMultiplier;
+
     public void Init()
     {
         _initialPosition = transform.position;
-
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -26,6 +31,8 @@ public class ShadowController : MonoBehaviour
         transform.Translate(shift);
 
         float distanceToPlayer = Mathf.Abs(_gameplayManager.CurrentPlayer.transform.position.x - transform.position.x);
+
+        _audioSource.volume = (1f - distanceToPlayer / _maxPlayerDistance) * _volumeMultiplier;
 
         if (distanceToPlayer > _maxPlayerDistance)
         {

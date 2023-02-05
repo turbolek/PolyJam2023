@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class AudioManager : MonoBehaviour
@@ -38,7 +39,7 @@ public class AudioManager : MonoBehaviour
             soundEffectsSlider.value = soundEffectsFloat;
         }
 
-        DontDestroyOnLoad(this.gameObject);
+        
     }
     public void SaveSoundSettings()
     {
@@ -63,4 +64,6 @@ public class AudioManager : MonoBehaviour
             soundEffectsAudio[i].volume = soundEffectsSlider.value;
         }
     }
+
+
 }
