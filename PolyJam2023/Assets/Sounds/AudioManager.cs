@@ -38,8 +38,6 @@ public class AudioManager : MonoBehaviour
             soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
             soundEffectsSlider.value = soundEffectsFloat;
         }
-
-        DontDestroyOnLoad(this.gameObject);
     }
     public void SaveSoundSettings()
     {
