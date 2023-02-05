@@ -17,10 +17,15 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 21300000, guid: a9ea9c638c50739488e4e02a5bb6ae33, type: 3}
+    - {fileID: 8300000, guid: 3c45b7b05027e6d429d79a01f46d1026, type: 3}
     - {fileID: 21300000, guid: 154ab3cace4940c41800f4377c87883f, type: 3}
+    - {fileID: 8300000, guid: 37d29641ec13b4341ab49873e61526a3, type: 3}
     - {fileID: 21300000, guid: 61902c2abc43fa84a88163d0e2edc0bc, type: 3}
+    - {fileID: 8300000, guid: f3599a635c281e141b91c0e73f4a6a73, type: 3}
     - {fileID: 21300000, guid: 5313d6b99ee34f04fb742eddcd154f87, type: 3}
+    - {fileID: 8300000, guid: f177110740a389b43a6612273d3aecbd, type: 3}
     - {fileID: 21300000, guid: 43a1898bf8b3e9048a6e5c5f84837a02, type: 3}
+    - {fileID: 8300000, guid: 7810e12bbff4019459d8d4774343bd6c, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -59,6 +64,9 @@ MonoBehaviour:
     - Name: PointsPerSecond
       Entry: 4
       Data: 1
+    - Name: _footstepSound
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -85,10 +93,13 @@ MonoBehaviour:
       Data: 2
     - Name: AvatarSprite
       Entry: 10
-      Data: 1
+      Data: 2
     - Name: PointsPerSecond
       Entry: 4
       Data: 2
+    - Name: _footstepSound
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -115,10 +126,13 @@ MonoBehaviour:
       Data: 2
     - Name: AvatarSprite
       Entry: 10
-      Data: 2
+      Data: 4
     - Name: PointsPerSecond
       Entry: 4
       Data: 4
+    - Name: _footstepSound
+      Entry: 10
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -145,10 +159,13 @@ MonoBehaviour:
       Data: 2
     - Name: AvatarSprite
       Entry: 10
-      Data: 3
+      Data: 6
     - Name: PointsPerSecond
       Entry: 4
       Data: 8
+    - Name: _footstepSound
+      Entry: 10
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
@@ -175,10 +192,13 @@ MonoBehaviour:
       Data: 2
     - Name: AvatarSprite
       Entry: 10
-      Data: 4
+      Data: 8
     - Name: PointsPerSecond
       Entry: 4
       Data: 16
+    - Name: _footstepSound
+      Entry: 10
+      Data: 9
     - Name: 
       Entry: 8
       Data: 

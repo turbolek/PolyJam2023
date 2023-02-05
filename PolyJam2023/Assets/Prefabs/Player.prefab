@@ -182,7 +182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerAgingData: {fileID: 11400000, guid: e4c49655b26ff8c448ab92914c1c5dfe, type: 2}
   _agingSpeed: 1
-  IsRunning: 0
+  _audioSource: {fileID: -2981249821530791612}
   IsAlive: 1
 --- !u!95 &4391023211050850714
 Animator:
@@ -211,14 +211,14 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7455218867193794140}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f93d3492f1186744d86e31e25b707cd0, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
     private float _agingSpeed;
     private float _age;
 
+    [SerializeField]
+    AudioSource _audioSource;
+
     private SpriteRenderer _spriteRenderer;
 
     private bool _isRunning = false;
@@ -211,5 +214,11 @@ public class Player : MonoBehaviour
     public void Struggle()
     {
         _animator.SetTrigger("Struggle");
+    }
+
+    public void PlayFootstepSound()
+    {
+        AudioClip footstepClip = _currentAgeData._footstepSound;
+        _audioSource.PlayOneShot(footstepClip);
     }
 }
