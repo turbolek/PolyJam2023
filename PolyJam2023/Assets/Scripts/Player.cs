@@ -95,6 +95,8 @@ public class Player : MonoBehaviour
             _age += _agingSpeed * Time.deltaTime;
             HandleAge();
 
+            _animator.SetBool("InAir", !CheckIfOnGround());
+
             if (CheckIfOnGround())
             {
                 _jumpCount = 0;
@@ -131,10 +133,17 @@ public class Player : MonoBehaviour
         if (canJump)
         {
             Debug.Log("JumpCount: " + _jumpCount);
-            Vector2 jumpVector = new Vector2(0f, _currentAgeData.JumpForce);
-            _rigidbody2D.velocity = jumpVector;
+            IsRunning = false;
             _jumpCount++;
+            _animator.SetTrigger("Jump");
         }
+    }
+
+    public void TakeOff()
+    {
+        IsRunning = true;
+        Vector2 jumpVector = new Vector2(0f, _currentAgeData.JumpForce);
+        _rigidbody2D.velocity = jumpVector;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
