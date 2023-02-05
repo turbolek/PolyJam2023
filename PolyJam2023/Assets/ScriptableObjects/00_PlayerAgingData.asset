@@ -19,18 +19,68 @@ MonoBehaviour:
     - {fileID: 21300000, guid: b577fe60c41be7a49a9ea83ef5dfe2c5, type: 3}
     - {fileID: 8300000, guid: 3c45b7b05027e6d429d79a01f46d1026, type: 3}
     - {fileID: 8300000, guid: 0916af2c768926c4e9eaa4ca131b7f96, type: 3}
+    - {fileID: 21300000, guid: 02e4a1a1164f6194887f0fca0e25516b, type: 3}
+    - {fileID: 21300000, guid: 36569f1ec2b0bb9469bc3ac288dd075b, type: 3}
+    - {fileID: 21300000, guid: 6c0e542cfb1775d4aa905a6d99baf571, type: 3}
+    - {fileID: 21300000, guid: 77e25cf535f740143b0c04273b1f6e46, type: 3}
+    - {fileID: 21300000, guid: f961ae85dcfed6b448cd45e499d6fac5, type: 3}
+    - {fileID: 21300000, guid: df983910e5a8baa4e801451af5ac7fd1, type: 3}
+    - {fileID: 21300000, guid: d186f5157a3247b4581eb6c5527effeb, type: 3}
+    - {fileID: 21300000, guid: e337d605c2fb485459099dc44d639066, type: 3}
+    - {fileID: 21300000, guid: abc08e6a9e6e513449c7e20a07668a85, type: 3}
+    - {fileID: 21300000, guid: 7106fbbcf6f8c81498a85adecd3fe079, type: 3}
     - {fileID: 21300000, guid: a39f0c04763366b4fa561f79f27af471, type: 3}
     - {fileID: 8300000, guid: 37d29641ec13b4341ab49873e61526a3, type: 3}
     - {fileID: 8300000, guid: 0f75b92d7b71d844d98006d51c1c2e55, type: 3}
+    - {fileID: 21300000, guid: 0cc935e8e3638fd41999f4789dedb719, type: 3}
+    - {fileID: 21300000, guid: 3bdfe9043d70f7241aa4a13a3bac0568, type: 3}
+    - {fileID: 21300000, guid: c0c7ea47fad2cc646885d2ce800cd8d9, type: 3}
+    - {fileID: 21300000, guid: 2188ba5e84efb034ba286a9e2a311017, type: 3}
+    - {fileID: 21300000, guid: c22c7381f703ee44895805c59dad8f1e, type: 3}
+    - {fileID: 21300000, guid: b6930a45248fa244c8c376ad9a3ca0e6, type: 3}
+    - {fileID: 21300000, guid: 762d321c59a452049ae4a821951289ff, type: 3}
+    - {fileID: 21300000, guid: 97973ae392532f2438c788f9baa6a7e1, type: 3}
+    - {fileID: 21300000, guid: 200eb7778f68987449551ba1540ed3f7, type: 3}
+    - {fileID: 21300000, guid: 640881cca926a024a838c5f81b35fc15, type: 3}
     - {fileID: 21300000, guid: 532c2da30f13285469650a5937019fe9, type: 3}
     - {fileID: 8300000, guid: f3599a635c281e141b91c0e73f4a6a73, type: 3}
     - {fileID: 8300000, guid: ce1ba5d740636f2428d4ce17c87b33c7, type: 3}
+    - {fileID: 21300000, guid: 43934ee76623d6a4ebc9c7d308495254, type: 3}
+    - {fileID: 21300000, guid: 63737de5138a8d4408c1a4baf5febb87, type: 3}
+    - {fileID: 21300000, guid: df7b2be3a9797b94585452a7b3e17375, type: 3}
+    - {fileID: 21300000, guid: bd9afe262d2c05f4d8c3e2ac37b8ca7b, type: 3}
+    - {fileID: 21300000, guid: 280014844808e9d489ff678c622391c2, type: 3}
+    - {fileID: 21300000, guid: a120229e7edef424eb92ddc7ac85cafb, type: 3}
+    - {fileID: 21300000, guid: 55ba4de171467fe4bbb6bb0f8238f77e, type: 3}
+    - {fileID: 21300000, guid: b42b38bb78ab6cb48bb87b776daa9e73, type: 3}
+    - {fileID: 21300000, guid: 5b800c052d6c6954f9d9364b3e357f9f, type: 3}
+    - {fileID: 21300000, guid: 151aa1f9bde4d884abecef03366c9ec9, type: 3}
     - {fileID: 21300000, guid: 5df79d155513c9d4b8e42c7e09f8114b, type: 3}
     - {fileID: 8300000, guid: f177110740a389b43a6612273d3aecbd, type: 3}
     - {fileID: 8300000, guid: 78fc2630c10cb1c4b8dd3160d2afb580, type: 3}
+    - {fileID: 21300000, guid: 4164d6fb5b3481848b67bb1092703cce, type: 3}
+    - {fileID: 21300000, guid: 61299ff7ce3d43040b2c7a0fdd53da9c, type: 3}
+    - {fileID: 21300000, guid: 4048ee4707e18324eb2c48e344686399, type: 3}
+    - {fileID: 21300000, guid: acbee3f85cde7014abca110ccdd1827a, type: 3}
+    - {fileID: 21300000, guid: 9907b9c7f0eeeca488edf4b3c1c78174, type: 3}
+    - {fileID: 21300000, guid: d6366b54bf51fb3479641449567a0e51, type: 3}
+    - {fileID: 21300000, guid: a5e2c81f53e18334b8dfac9ce80d77cd, type: 3}
+    - {fileID: 21300000, guid: 507dcae17aa9ced4f8793fe767113103, type: 3}
+    - {fileID: 21300000, guid: 4ee8bcd2b03151443be6076324155cba, type: 3}
+    - {fileID: 21300000, guid: 7ef1c9126bd33c94a858b65971ac5678, type: 3}
     - {fileID: 21300000, guid: f0fc4e0e0cd1866448bcbd61abc4d892, type: 3}
     - {fileID: 8300000, guid: 7810e12bbff4019459d8d4774343bd6c, type: 3}
     - {fileID: 8300000, guid: 2ce521da876120e42ac08a51e70148fb, type: 3}
+    - {fileID: 21300000, guid: b60ca89ea01ccb6468077e7db7382996, type: 3}
+    - {fileID: 21300000, guid: 447d3daa6162dfe4d86f5ce1b04d60b1, type: 3}
+    - {fileID: 21300000, guid: d967b11b7761f9048886679e8a82fea0, type: 3}
+    - {fileID: 21300000, guid: d95f7a4c450f6124fa8961127650d056, type: 3}
+    - {fileID: 21300000, guid: e28d3a0ea16fe26499dc9192af72002d, type: 3}
+    - {fileID: 21300000, guid: 2436ef8d50628364a811a21b8ecaf48a, type: 3}
+    - {fileID: 21300000, guid: 148f8e42899d5804ca029ad12fa0e31e, type: 3}
+    - {fileID: 21300000, guid: a9d1f83fb5b4cf04c9132c5c0d550614, type: 3}
+    - {fileID: 21300000, guid: aa2378b2ddd89c9439a8c588428b762e, type: 3}
+    - {fileID: 21300000, guid: a3f31e69c599d484893f55349a4106e5, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -75,12 +125,54 @@ MonoBehaviour:
     - Name: JumpSound
       Entry: 10
       Data: 2
+    - Name: BirthSprites
+      Entry: 7
+      Data: 2|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 10
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 7
+    - Name: 
+      Entry: 10
+      Data: 8
+    - Name: 
+      Entry: 10
+      Data: 9
+    - Name: 
+      Entry: 10
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 11
+    - Name: 
+      Entry: 10
+      Data: 12
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|AgeData, Assembly-CSharp
+      Data: 3|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
       Data: 5
@@ -101,22 +193,64 @@ MonoBehaviour:
       Data: 1
     - Name: AvatarSprite
       Entry: 10
-      Data: 3
+      Data: 13
     - Name: PointsPerSecond
       Entry: 4
       Data: 2
     - Name: _footstepSound
       Entry: 10
-      Data: 4
+      Data: 14
     - Name: JumpSound
       Entry: 10
-      Data: 5
+      Data: 15
+    - Name: BirthSprites
+      Entry: 7
+      Data: 4|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 16
+    - Name: 
+      Entry: 10
+      Data: 17
+    - Name: 
+      Entry: 10
+      Data: 18
+    - Name: 
+      Entry: 10
+      Data: 19
+    - Name: 
+      Entry: 10
+      Data: 20
+    - Name: 
+      Entry: 10
+      Data: 21
+    - Name: 
+      Entry: 10
+      Data: 22
+    - Name: 
+      Entry: 10
+      Data: 23
+    - Name: 
+      Entry: 10
+      Data: 24
+    - Name: 
+      Entry: 10
+      Data: 25
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 3|AgeData, Assembly-CSharp
+      Data: 5|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
       Data: 10
@@ -137,22 +271,64 @@ MonoBehaviour:
       Data: 1
     - Name: AvatarSprite
       Entry: 10
-      Data: 6
+      Data: 26
     - Name: PointsPerSecond
       Entry: 4
       Data: 4
     - Name: _footstepSound
       Entry: 10
-      Data: 7
+      Data: 27
     - Name: JumpSound
       Entry: 10
-      Data: 8
+      Data: 28
+    - Name: BirthSprites
+      Entry: 7
+      Data: 6|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 29
+    - Name: 
+      Entry: 10
+      Data: 30
+    - Name: 
+      Entry: 10
+      Data: 31
+    - Name: 
+      Entry: 10
+      Data: 32
+    - Name: 
+      Entry: 10
+      Data: 33
+    - Name: 
+      Entry: 10
+      Data: 34
+    - Name: 
+      Entry: 10
+      Data: 35
+    - Name: 
+      Entry: 10
+      Data: 36
+    - Name: 
+      Entry: 10
+      Data: 37
+    - Name: 
+      Entry: 10
+      Data: 38
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|AgeData, Assembly-CSharp
+      Data: 7|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
       Data: 18
@@ -173,22 +349,64 @@ MonoBehaviour:
       Data: 1
     - Name: AvatarSprite
       Entry: 10
-      Data: 9
+      Data: 39
     - Name: PointsPerSecond
       Entry: 4
       Data: 8
     - Name: _footstepSound
       Entry: 10
-      Data: 10
+      Data: 40
     - Name: JumpSound
       Entry: 10
-      Data: 11
+      Data: 41
+    - Name: BirthSprites
+      Entry: 7
+      Data: 8|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 42
+    - Name: 
+      Entry: 10
+      Data: 43
+    - Name: 
+      Entry: 10
+      Data: 44
+    - Name: 
+      Entry: 10
+      Data: 45
+    - Name: 
+      Entry: 10
+      Data: 46
+    - Name: 
+      Entry: 10
+      Data: 47
+    - Name: 
+      Entry: 10
+      Data: 48
+    - Name: 
+      Entry: 10
+      Data: 49
+    - Name: 
+      Entry: 10
+      Data: 50
+    - Name: 
+      Entry: 10
+      Data: 51
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|AgeData, Assembly-CSharp
+      Data: 9|AgeData, Assembly-CSharp
     - Name: AgeThreshold
       Entry: 4
       Data: 30
@@ -209,16 +427,58 @@ MonoBehaviour:
       Data: 1
     - Name: AvatarSprite
       Entry: 10
-      Data: 12
+      Data: 52
     - Name: PointsPerSecond
       Entry: 4
       Data: 16
     - Name: _footstepSound
       Entry: 10
-      Data: 13
+      Data: 53
     - Name: JumpSound
       Entry: 10
-      Data: 14
+      Data: 54
+    - Name: BirthSprites
+      Entry: 7
+      Data: 10|UnityEngine.Sprite[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 10
+      Data: 55
+    - Name: 
+      Entry: 10
+      Data: 56
+    - Name: 
+      Entry: 10
+      Data: 57
+    - Name: 
+      Entry: 10
+      Data: 58
+    - Name: 
+      Entry: 10
+      Data: 59
+    - Name: 
+      Entry: 10
+      Data: 60
+    - Name: 
+      Entry: 10
+      Data: 61
+    - Name: 
+      Entry: 10
+      Data: 62
+    - Name: 
+      Entry: 10
+      Data: 63
+    - Name: 
+      Entry: 10
+      Data: 64
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 

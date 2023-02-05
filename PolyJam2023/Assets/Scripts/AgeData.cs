@@ -13,4 +13,6 @@ public class AgeData
     public float PointsPerSecond;
     public AudioClip _footstepSound;
     public AudioClip JumpSound;
+
+    public Sprite[] BirthSprites;
 }

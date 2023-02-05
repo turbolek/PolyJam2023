@@ -1,6 +1,7 @@
 using Assets.Scripts;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -124,7 +125,7 @@ public class Player : MonoBehaviour
                     _animator.SetTrigger("AgeUp");
                     _newSprite = _currentAgeData.AvatarSprite;
                     Debug.Log("Changing age");
-                     _animator.SetFloat("RelativeRunningSpeed", _currentAgeData.RunningSpeed / _referenceSpeed);
+                    _animator.SetFloat("RelativeRunningSpeed", _currentAgeData.RunningSpeed / _referenceSpeed);
                 }
                 break;
             }
@@ -200,10 +201,26 @@ public class Player : MonoBehaviour
         IsRunning = false;
         IsAlive = false;
         _playerInput.Disable();
-        _animator.SetTrigger("Die");
-        _collider.enabled = false;
         _rigidbody2D.velocity = Vector2.zero;
+
+        DieTask();
+    }
+
+    private async Task DieTask()
+    {
+        int spriteIndex = 0;
+        _animator.SetTrigger("GiveBirth");
+
+        while (spriteIndex < _currentAgeData.BirthSprites.Length)
+        {
+            _spriteRenderer.sprite = _currentAgeData.BirthSprites[spriteIndex];
+            spriteIndex++;
+            await Task.Delay(25);
+        }
+
         _rigidbody2D.gravityScale = 0.5f;
+        _collider.enabled = false;
+        _animator.SetTrigger("Die");
     }
 
     public void ChangeSprite()
