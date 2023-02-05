@@ -1088,7 +1088,7 @@ MonoBehaviour:
       Data: 1
     - Name: SpawnChance
       Entry: 4
-      Data: 7
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -1100,7 +1100,7 @@ MonoBehaviour:
       Data: 2
     - Name: SpawnChance
       Entry: 4
-      Data: 17
+      Data: 13
     - Name: 
       Entry: 8
       Data: 
@@ -1112,7 +1112,7 @@ MonoBehaviour:
       Data: 3
     - Name: SpawnChance
       Entry: 4
-      Data: 8
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
