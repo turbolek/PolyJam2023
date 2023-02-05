@@ -40,10 +40,14 @@ public class GameplayManager : MonoBehaviour
 
     private float _score;
 
+    private AudioSource _audioSource;
+    [SerializeField]
+    private AudioClip _gameOverAudioClip;
+
     private void Start()
     {
         _inputAsset = new MyInputAsset();
-
+        _audioSource = GetComponent<AudioSource>();
         _inputAsset.GameControls.Die.performed += ctx =>
         {
             DieAndRespawn();
@@ -68,6 +72,7 @@ public class GameplayManager : MonoBehaviour
         _inputAsset.PlayerControls.Disable();
 
         _inputAsset.GameControls.Restart.Enable();
+        _audioSource.PlayOneShot(_gameOverAudioClip);
     }
 
     private void DieAndRespawn()

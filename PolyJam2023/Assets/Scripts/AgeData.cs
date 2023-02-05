@@ -11,4 +11,6 @@ public class AgeData
     public int JumpComboLimit;
     public Sprite AvatarSprite;
     public float PointsPerSecond;
+    public AudioClip _footstepSound;
+    public AudioClip JumpSound;
 }

@@ -5,7 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
     [SerializeField]
@@ -15,6 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float _agingSpeed;
     private float _age;
+
+    [SerializeField]
+    AudioSource _audioSource;
 
     private SpriteRenderer _spriteRenderer;
 
@@ -50,7 +52,6 @@ public class Player : MonoBehaviour
     private Sprite _newSprite;
 
 
-
     // Start is called before the first frame update
     public void Init()
     {
@@ -76,9 +77,9 @@ public class Player : MonoBehaviour
     public void StartRunning()
     {
         _playerInput.PlayerControls.Enable();
+        _referenceSpeed = 9f;
         HandleAge();
         ChangeSprite();
-        _referenceSpeed = _currentAgeData.RunningSpeed;
         IsRunning = true;
     }
 
@@ -121,6 +122,7 @@ public class Player : MonoBehaviour
                     _animator.SetTrigger("AgeUp");
                     _newSprite = _currentAgeData.AvatarSprite;
                     Debug.Log("Changing age");
+                     _animator.SetFloat("RelativeRunningSpeed", _currentAgeData.RunningSpeed / _referenceSpeed);
                 }
                 break;
             }
@@ -215,4 +217,15 @@ public class Player : MonoBehaviour
         _animator.SetTrigger("Struggle");
     }
 
+    public void PlayFootstepSound()
+    {
+        AudioClip footstepClip = _currentAgeData._footstepSound;
+        _audioSource.PlayOneShot(footstepClip);
+    }
+
+    public void PlayJumpSound()
+    {
+        AudioClip footstepClip = _currentAgeData.JumpSound;
+        _audioSource.PlayOneShot(footstepClip);
+    }
 }
