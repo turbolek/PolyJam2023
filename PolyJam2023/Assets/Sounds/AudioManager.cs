@@ -39,7 +39,7 @@ public class AudioManager : MonoBehaviour
             soundEffectsSlider.value = soundEffectsFloat;
         }
 
-        
+        DontDestroyOnLoad(this.gameObject);
     }
     public void SaveSoundSettings()
     {
