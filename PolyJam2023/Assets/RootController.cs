@@ -36,6 +36,7 @@ public class RootController : MonoBehaviour
         _holdStartTime = Time.time;
         _heldPlayer.Rigidbody2D.velocity = Vector2.zero;
         _heldPlayer.Rigidbody2D.gravityScale = 0f;
+        _heldPlayer.Struggle();
     }
 
     private void ReleasePlayer()

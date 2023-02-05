@@ -17,7 +17,16 @@ public class Player : MonoBehaviour
 
     private SpriteRenderer _spriteRenderer;
 
-    public bool IsRunning = false;
+    private bool _isRunning = false;
+    public bool IsRunning
+    {
+        get { return _isRunning; }
+        set
+        {
+            _isRunning = value;
+            _animator.SetBool("IsRunning", value);
+        }
+    }
 
     public bool IsAlive = true;
 
@@ -188,5 +197,10 @@ public class Player : MonoBehaviour
     private void OnDestroy()
     {
         _playerInput.Dispose();
+    }
+
+    public void Struggle()
+    {
+        _animator.SetTrigger("Struggle");
     }
 }
