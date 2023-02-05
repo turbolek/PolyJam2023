@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
 
     private Collider2D _collider;
 
+
     // Start is called before the first frame update
     public void Init()
     {
@@ -80,6 +81,7 @@ public class Player : MonoBehaviour
             {
                 _jumpCount = 0;
             }
+
         }
     }
 
