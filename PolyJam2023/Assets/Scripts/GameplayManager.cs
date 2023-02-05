@@ -44,10 +44,24 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     private AudioClip _gameOverAudioClip;
 
+    [SerializeField]
+    private AudioSource _musicAudioSource;
+
+    [SerializeField]
+    private AudioClip _firstMusic;
+    [SerializeField]
+    private AudioClip _loopMusic;
+    [SerializeField]
+    private AudioClip _gameoverMusic;
+
+    private bool _gameOver = false;
+
     private void Start()
     {
         _inputAsset = new MyInputAsset();
         _audioSource = GetComponent<AudioSource>();
+
+
         _inputAsset.GameControls.Die.performed += ctx =>
         {
             DieAndRespawn();
@@ -73,6 +87,12 @@ public class GameplayManager : MonoBehaviour
 
         _inputAsset.GameControls.Restart.Enable();
         _audioSource.PlayOneShot(_gameOverAudioClip);
+
+        _musicAudioSource.clip = _gameoverMusic;
+        _musicAudioSource.loop = false;
+        _musicAudioSource.Play();
+
+        _gameOver = true;
     }
 
     private void DieAndRespawn()
@@ -114,6 +134,13 @@ public class GameplayManager : MonoBehaviour
         _tileSpawner.SpawnInitialTiles();
         SpawnbackgroundElements();
         DieAndRespawn();
+
+
+        _musicAudioSource.clip = _firstMusic;
+        _musicAudioSource.loop = false;
+        _musicAudioSource.Play();
+
+        _gameOver = false;
     }
 
     private void SpawnbackgroundElements()
@@ -126,10 +153,17 @@ public class GameplayManager : MonoBehaviour
 
     private void Update()
     {
-        if (_currentPlayer.IsAlive)
+        if (_currentPlayer.IsAlive && !_gameOver)
         {
             _score += _currentPlayer.CurrentAgeData.PointsPerSecond * Time.deltaTime;
             _scoreValue.text = _score.ToString("F0");
+
+            if (!_musicAudioSource.isPlaying)
+            {
+                _musicAudioSource.clip = _loopMusic;
+                _musicAudioSource.loop = true;
+                _musicAudioSource.Play();
+            }
         }
     }
 }

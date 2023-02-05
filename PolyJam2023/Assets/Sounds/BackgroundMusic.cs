@@ -18,8 +18,6 @@ public class BackgroundMusic : MonoBehaviour
         if (instance == null) { instance = this; }
         else { Destroy(gameObject); }
 
-        DontDestroyOnLoad(gameObject);
-
         // Hooks up the 'OnSceneLoaded' method to the sceneLoaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
