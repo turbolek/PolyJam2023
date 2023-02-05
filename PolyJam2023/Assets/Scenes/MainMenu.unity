@@ -266,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &95641138
 Transform:
   m_ObjectHideFlags: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.54509807, g: 0.54509807, b: 0.7490196, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3060,9 +3060,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A game created by:\n\nDaniel Kunicki\r\nKamis Kami\u0144ski\r\nMateusz
-    \"Tost\" Kokot\r\nMicha\u0142 \"Burry\" Przybysz\r\nWiktor Waszczuk\r\n\r\na.k.a.
-    Zieloni"
+  m_text: 'A game created by:
+
+
+    Daniel Kunicki
+
+    Kamis Kaminski
+
+    Mateusz
+    "Tost" Kokot
+
+    Michal "Burry" Przybysz
+
+    Wiktor Waszczuk
+
+    
+
+    a.k.a.
+    Zieloni'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da5b41cb0ac5f304f8fa3eb9a9820c7d, type: 2}
   m_sharedMaterial: {fileID: 1164908240097115811, guid: da5b41cb0ac5f304f8fa3eb9a9820c7d, type: 2}
@@ -4382,7 +4397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1807446289
 Transform:
   m_ObjectHideFlags: 0
