@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -72,10 +73,20 @@ public class GameplayManager : MonoBehaviour
             ResetGame();
         };
 
+        _inputAsset.GameControls.BackToMenu.performed += ctx =>
+        {
+            BackTomenu();
+        };
+
         _shadowController.Init();
         _cameraTransformTracker.Init();
 
         ResetGame();
+    }
+
+    private void BackTomenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void GameOver()

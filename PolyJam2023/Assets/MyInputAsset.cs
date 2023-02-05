@@ -72,6 +72,15 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BackToMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""6caa1eca-cab1-4f29-9503-39586ba21f5f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -96,6 +105,17 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                     ""action"": ""Restart"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""97130771-33f8-42d8-ae7a-fd2c6cddd673"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""BackToMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -109,6 +129,7 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
         m_GameControls = asset.FindActionMap("GameControls", throwIfNotFound: true);
         m_GameControls_Die = m_GameControls.FindAction("Die", throwIfNotFound: true);
         m_GameControls_Restart = m_GameControls.FindAction("Restart", throwIfNotFound: true);
+        m_GameControls_BackToMenu = m_GameControls.FindAction("BackToMenu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -203,12 +224,14 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
     private IGameControlsActions m_GameControlsActionsCallbackInterface;
     private readonly InputAction m_GameControls_Die;
     private readonly InputAction m_GameControls_Restart;
+    private readonly InputAction m_GameControls_BackToMenu;
     public struct GameControlsActions
     {
         private @MyInputAsset m_Wrapper;
         public GameControlsActions(@MyInputAsset wrapper) { m_Wrapper = wrapper; }
         public InputAction @Die => m_Wrapper.m_GameControls_Die;
         public InputAction @Restart => m_Wrapper.m_GameControls_Restart;
+        public InputAction @BackToMenu => m_Wrapper.m_GameControls_BackToMenu;
         public InputActionMap Get() { return m_Wrapper.m_GameControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -224,6 +247,9 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                 @Restart.started -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnRestart;
                 @Restart.performed -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnRestart;
                 @Restart.canceled -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnRestart;
+                @BackToMenu.started -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnBackToMenu;
+                @BackToMenu.performed -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnBackToMenu;
+                @BackToMenu.canceled -= m_Wrapper.m_GameControlsActionsCallbackInterface.OnBackToMenu;
             }
             m_Wrapper.m_GameControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -234,6 +260,9 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
                 @Restart.started += instance.OnRestart;
                 @Restart.performed += instance.OnRestart;
                 @Restart.canceled += instance.OnRestart;
+                @BackToMenu.started += instance.OnBackToMenu;
+                @BackToMenu.performed += instance.OnBackToMenu;
+                @BackToMenu.canceled += instance.OnBackToMenu;
             }
         }
     }
@@ -246,5 +275,6 @@ public partial class @MyInputAsset : IInputActionCollection2, IDisposable
     {
         void OnDie(InputAction.CallbackContext context);
         void OnRestart(InputAction.CallbackContext context);
+        void OnBackToMenu(InputAction.CallbackContext context);
     }
 }
